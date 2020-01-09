@@ -1,29 +1,37 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
+import { Container, Card } from "semantic-ui-react";
 import { setBooks } from "./actions/books";
+import axios from "axios";
 
+import MenuComponent from "./components/MenuComponent";
+import BookCard from "./components/BookCard";
 class App extends Component {
-  render() {
-    const { books } = this.props.books;
+  componentWillMount() {
     const { setBooks } = this.props;
-    const newBooks = [
-      {
-        id: 0,
-        title: "Купить книгу"
-      }
-    ];
-    // console.log(newBooks);
+    axios.get("/books.json").then(({ data }) => {
+      setBooks(data);
+    });
+  }
+
+  render() {
+    const { books, isReady } = this.props;
     return (
-      <div>
-        <h1>{books[0].title}</h1>
-        <button onClick={setBooks.bind(this.newBooks)}>SET NEW BOOK</button>
-      </div>
+      <Container>
+        <MenuComponent />
+        <Card.Group itemPerRow={4}>
+          {!isReady
+            ? "Загрузка..."
+            : books.map((book, i) => <BookCard key={i} {...book} />)}
+        </Card.Group>
+      </Container>
     );
   }
 }
 
-const mapStateToProps = state => ({
-  ...state
+const mapStateToProps = ({ books }) => ({
+  books: books.items,
+  isReady: books.isReady
 });
 
 const mapDispatchToProps = dispatch => ({
