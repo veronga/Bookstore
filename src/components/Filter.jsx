@@ -19,7 +19,7 @@ const Filter = ({ setFilter, filterBy, searchQuery, setSearchQuery }) => (
       active={filterBy === "price_low"}
       onClick={setFilter.bind(this, "price_low")}
     >
-      Цена (дешовые)
+      Цена (дешевые)
     </Menu.Item>
     <Menu.Item
       active={filterBy === "author"}
