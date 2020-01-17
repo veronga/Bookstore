@@ -2,16 +2,16 @@
 
 Stack:
 
-ReactJS
+*ReactJS
 
-Redux
+*Redux
 
-Redux Thunk
+*Redux Thunk
 
-React Logger
+*React Logger
 
-Axios
+*Axios
 
-Lodash
+*Lodash
 
-Semantic UI (React)
+*Semantic UI (React)
