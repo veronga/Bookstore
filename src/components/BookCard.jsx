@@ -4,8 +4,8 @@ import { Card, Image, Icon, Button } from "semantic-ui-react";
 const BookCard = book => {
   const { title, author, price, image, addToCart, addedCount } = book;
   return (
-    <Card>
-      <Image src={image} />
+    <Card color="gray">
+      <Image src={image} size="massive" />
       <Card.Content>
         <Card.Header>{title}</Card.Header>
         <Card.Meta>

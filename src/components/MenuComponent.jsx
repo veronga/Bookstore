@@ -17,14 +17,14 @@ const CartComponent = ({ title, id, image, removeFromCart }) => (
 
 const MenuComponent = ({ totalPrice, count, items }) => (
   <Menu>
-    <Menu.Item name="browse">Магазин книг</Menu.Item>
-
+    <Menu.Item name="browse">КНИГИ ДЛЯ ВСЕХ</Menu.Item>
     <Menu.Menu position="right">
       <Menu.Item name="signup">
         Итого: &nbsp; <b>{totalPrice}</b>&nbsp;руб.
       </Menu.Item>
 
       <Popup
+        wide="very"
         trigger={
           <Menu.Item name="help">
             Корзина (<b>{count}</b>)
