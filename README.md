@@ -1,11 +1,9 @@
-Интернет-магазин книг
-
-Stack:
-
-ReactJS
-Redux
-Redux Thunk
-React Logger
-Axios
-Lodash
-Semantic UI (React)
+#### Online book store
+***
+##### Stack:
++ ReactJS
++ Redux
++ React Logger
++ Axios
++ Lodash
++ Semantic UI (React)
