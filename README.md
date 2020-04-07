@@ -3,7 +3,7 @@
 ##### Stack:
 + ReactJS
 + Redux
-+ React Logger
++ Redux Logger
 + Axios
 + Lodash
 + Semantic UI (React)
